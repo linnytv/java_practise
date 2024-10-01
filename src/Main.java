@@ -15,6 +15,7 @@ public class Main {
                 "               VAT REG.  TIN " + vatreg +"\n" +
                 "                   SALES INVOICE \n"
         );
+       // the buyer section
        System.out.println(
          "\n Sold to:" + buyer +
          "          Date:"+ date + "\n"+
@@ -22,5 +23,45 @@ public class Main {
          "                     Contact Number:" +
          contact + "\n \n"
        );
+       //the table header...bruuuh
+        System.out.println(
+                "-------------------------------------------------------------------------------"
+        );
+       System.out.printf(
+                       "%-5s %-20s %-15s %20s%n", "Qty" , "|   Item Description    " , "|  Unit Price  " , "| Amount   "
+       );
+       System.out.println(
+               "-------------------------------------------------------------------------------\n"
+       );
+        System.out.printf(
+                "%-5s %-20s %-15s %20s%n", "4" , "|   Pencil        " , "|  28  " , "| 80.00   "
+        );
+        System.out.printf(
+                "%-5s %-20s %-15s %20s%n", "10" , "|   Duster    " , "|  50  " , "| 500.00   "
+        );
+        System.out.printf(
+                "%-5s %-20s %-15s %20s%n", "9" , "|   Pens    " , "|  30  " , "| 270.00   "
+        );
+        System.out.printf(
+                "%-5s %-20s %-15s %20s%n", "4" , "|   crayon    " , "|  80  " , "| 800.00   "
+        );
+        System.out.println(
+                "-------------------------------------------------------------------------------\n" +
+                "-------------------------------------------------------------------------------\n"
+        );
+        //the totals
+    double subtotals=(80+500+270+800);
+    double vat=(subtotals*0.16);
+    double amountdue=(subtotals+vat);
+    //printing the totals : )
+    System.out.println(                        "                   ------------------------------\n" +
+
+                    "                   |Subtotal           |   " + subtotals + "\n" +
+                       "                   ------------------------------\n" +
+    "                   |VAT(16%)           |   " + vat + "\n" +
+                       "                   ------------------------------\n" +
+    "                   |Total Amount       |   " + amountdue + "\n" +
+                       "                   ------------------------------\n"
+    );
     }
 }
